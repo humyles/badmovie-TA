@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+/* const mongoose = require('mongoose');
 if(process.env.MONGODB_URI){
   mongoose.connect(process.env.MONGODB_URI)
 } else{
@@ -13,4 +13,4 @@ db.once('open', () => {
   console.log('Connected to db...');
 })
 
-module.exports.db = db
+module.exports.db = db */

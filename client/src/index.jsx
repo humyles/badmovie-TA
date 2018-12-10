@@ -4,6 +4,7 @@ import $ from 'jquery';
 // import AnyComponent from './components/filename.jsx'
 import Search from './components/Search.jsx'
 import Movies from './components/Movies.jsx'
+import Axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,12 +18,24 @@ class App extends React.Component {
     // you might have to do something important here!
   }
 
+  componentDidMount() {
+    this.getMovies() 
+  }
   getMovies() {
     // make an axios request to your server on the GET SEARCH endpoint
+    Axios.get('/movies/search').then((res) => {
+      this.setState({
+        movies:res.data.results
+      })
+
+    })
   }
 
   saveMovie() {
     // same as above but do something diff
+    Axios.post('/movies/save',).then((res) => {
+
+    });
   }
 
   deleteMovie() {
@@ -39,7 +52,7 @@ class App extends React.Component {
   render () {
   	return (
       <div className="app">
-        <header className="navbar"><h1>Bad Movies</h1></header> 
+        <header className="navbar"><h1>Bad FUCKING Movies</h1></header> 
         
         <div className="main">
           <Search swapFavorites={this.swapFavorites} showFaves={this.state.showFaves}/>

@@ -1,1 +1,12 @@
 -- SET UP SCHEMA HERE
+
+db.query(`
+  CREATE TABLE IF NOT EXISTS tasks (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    title VARCHAR(500) DEFAULT NULL,
+    year INTEGER DEFAULT false,
+    rating DECIMAL DEFAULT NULL 
+    image VARCHAR(500) DEFAULT NULL
+    PRIMARY KEY(id)
+  );
+`)

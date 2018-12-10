@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 
 //OPTION 1: Use regular routes
-app.get('/search', function(req, res) {
+/* app.get('/search', function(req, res) {
   // get the search genre     
 
   // https://www.themoviedb.org/account/signup
@@ -40,7 +40,7 @@ app.post('/save', function(req, res) {
 
 app.post('/delete', function(req, res) {
 
-});
+}); */
 
 //OPTION 2: Use Express Router
 //IF you decide to go with this option delete OPTION 1 to continue
